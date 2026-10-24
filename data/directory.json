@@ -1,0 +1,43 @@
+{
+  "_說明": "科別／檢查／服務據點資料。building 對應 campus.json 的建築 id；floor 例如 \"1F\"、\"B1\"。verified=false 表示為「範例資料」，畫面上會標示，請院內人員確認後改為 true。aliases 為搜尋關鍵字（病人常用說法）。",
+  "types": {
+    "opd":     { "name": "門診",   "icon": "🩺", "color": "#4f9d5b" },
+    "exam":    { "name": "檢查",   "icon": "🔬", "color": "#2f7fd8" },
+    "ward":    { "name": "住院",   "icon": "🛏️", "color": "#9a6bd1" },
+    "service": { "name": "服務",   "icon": "🧾", "color": "#d98a1f" },
+    "emergency": { "name": "急診", "icon": "🚑", "color": "#e04848" }
+  },
+  "items": [
+    { "id": "er", "name": "急診室", "type": "emergency", "building": "chungcheng", "floor": "1F", "aliases": ["急診", "掛急診", "Emergency"], "verified": true, "note": "依院區平面圖標示位置。" },
+    { "id": "registration", "name": "掛號・批價櫃檯", "type": "service", "building": "chungcheng", "floor": "1F", "aliases": ["掛號", "批價", "繳費", "櫃檯"], "verified": false },
+    { "id": "pharmacy", "name": "門診藥局", "type": "service", "building": "chungcheng", "floor": "1F", "aliases": ["領藥", "藥局", "拿藥"], "verified": false },
+    { "id": "admission", "name": "住院服務中心", "type": "service", "building": "chungcheng", "floor": "1F", "aliases": ["住院手續", "辦住院", "出院"], "verified": false },
+    { "id": "lifeplaza", "name": "生活廣場（餐飲・商店）", "type": "service", "building": "chungcheng", "floor": "1F", "aliases": ["吃飯", "餐廳", "美食街", "便利商店"], "verified": true, "note": "依院區平面圖標示位置。" },
+    { "id": "xray", "name": "一般X光攝影", "type": "exam", "building": "chungcheng", "floor": "B1", "aliases": ["X光", "照X光", "胸部X光", "放射線"], "verified": false },
+    { "id": "ct", "name": "電腦斷層（CT）", "type": "exam", "building": "chungcheng", "floor": "B1", "aliases": ["斷層", "CT", "電腦斷層掃描"], "verified": false },
+    { "id": "mri", "name": "磁振造影（MRI）", "type": "exam", "building": "chungcheng", "floor": "B1", "aliases": ["核磁共振", "MRI", "磁振"], "verified": false },
+    { "id": "ultrasound", "name": "超音波檢查", "type": "exam", "building": "chungcheng", "floor": "2F", "aliases": ["超音波", "腹部超音波", "心臟超音波"], "verified": false },
+    { "id": "endoscopy", "name": "內視鏡檢查（胃鏡・大腸鏡）", "type": "exam", "building": "chungcheng", "floor": "3F", "aliases": ["胃鏡", "大腸鏡", "內視鏡"], "verified": false },
+    { "id": "ecg", "name": "心電圖室", "type": "exam", "building": "chungcheng", "floor": "2F", "aliases": ["心電圖", "EKG", "ECG"], "verified": false },
+    { "id": "icu", "name": "加護病房", "type": "ward", "building": "chungcheng", "floor": "5F", "aliases": ["ICU", "加護"], "verified": false },
+    { "id": "ward-cc", "name": "中正樓一般病房", "type": "ward", "building": "chungcheng", "floor": "8F", "aliases": ["病房", "探病"], "verified": false },
+    { "id": "or", "name": "手術室・家屬等候區", "type": "service", "building": "operating", "floor": "3F", "aliases": ["開刀", "手術", "家屬等候"], "verified": false },
+    { "id": "blood", "name": "抽血站（檢驗）", "type": "exam", "building": "opd1", "floor": "1F", "aliases": ["抽血", "驗血", "驗尿", "檢驗"], "verified": false },
+    { "id": "opd-im", "name": "內科門診", "type": "opd", "building": "opd1", "floor": "2F", "aliases": ["內科", "看診"], "verified": false },
+    { "id": "opd-cardio", "name": "心臟內科門診", "type": "opd", "building": "opd2", "floor": "2F", "aliases": ["心臟科", "心臟內科", "高血壓"], "verified": false },
+    { "id": "opd-surgery", "name": "外科門診", "type": "opd", "building": "opd2", "floor": "1F", "aliases": ["外科"], "verified": false },
+    { "id": "opd-ortho", "name": "骨科門診", "type": "opd", "building": "opd3", "floor": "1F", "aliases": ["骨科", "骨頭", "關節"], "verified": false },
+    { "id": "opd-ophth", "name": "眼科門診", "type": "opd", "building": "opd3", "floor": "2F", "aliases": ["眼科", "眼睛"], "verified": false },
+    { "id": "opd-ent", "name": "耳鼻喉科門診", "type": "opd", "building": "opd3", "floor": "3F", "aliases": ["耳鼻喉", "耳朵", "鼻子"], "verified": false },
+    { "id": "opd-ped", "name": "兒科門診", "type": "opd", "building": "lakeside", "floor": "1F", "aliases": ["兒科", "小兒科", "小孩"], "verified": false },
+    { "id": "opd-dental", "name": "牙科門診", "type": "opd", "building": "lakeside", "floor": "2F", "aliases": ["牙科", "看牙", "牙齒"], "verified": false },
+    { "id": "heavyion", "name": "重粒子治療", "type": "exam", "building": "heavyion", "floor": "1F", "aliases": ["重粒子", "癌症放射治療", "質子"], "verified": true, "note": "依院區平面圖標示建築。" },
+    { "id": "pet", "name": "正子造影（PET）", "type": "exam", "building": "pet", "floor": "1F", "aliases": ["正子", "PET", "正子掃描"], "verified": true, "note": "依院區平面圖標示建築。" },
+    { "id": "rehab", "name": "復健治療", "type": "opd", "building": "rehab", "floor": "1F", "aliases": ["復健", "物理治療", "職能治療", "輔具"], "verified": true, "note": "依院區平面圖標示建築（身障重建中心／復健中心）。" },
+    { "id": "neuro-rehab", "name": "神經修復", "type": "opd", "building": "neuro", "floor": "1F", "aliases": ["神經修復", "神經再生"], "verified": true, "note": "依院區平面圖標示建築。" },
+    { "id": "tcm", "name": "傳統醫學部（中醫）", "type": "opd", "building": "underpass", "floor": "1F", "aliases": ["中醫", "針灸", "傳醫"], "verified": true, "note": "依院區平面圖標示位置（地下連通道）。" },
+    { "id": "psych", "name": "精神科", "type": "opd", "building": "psych", "floor": "1F", "aliases": ["精神科", "身心科", "失眠"], "verified": false },
+    { "id": "social", "name": "社會工作室", "type": "service", "building": "rongguang", "floor": "1F", "aliases": ["社工", "補助", "社會服務"], "verified": true, "note": "依院區平面圖標示建築（榮光樓）。" },
+    { "id": "bank", "name": "銀行・郵局", "type": "service", "building": "service", "floor": "1F", "aliases": ["ATM", "提款", "郵局", "銀行"], "verified": false }
+  ]
+}

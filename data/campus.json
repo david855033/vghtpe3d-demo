@@ -1,0 +1,1407 @@
+{
+ "_說明": "座標單位＝平面圖 assets/floorplan.png 的像素 (寬1167×高828)。rect=[左,上,右,下]；obb=[中心x,中心y,寬,高,逆時針旋轉角度]。floors/樓層用途皆為示意，請依實際狀況修改。",
+ "meta": {
+  "title": "臺北榮民總醫院 3D 院區導覽",
+  "subtitle": "Taipei Veterans General Hospital · Campus Guide",
+  "notice": "依院區平面圖建立之示意模型；比例、樓高與科別位置請以院內公告為準",
+  "mapWidth": 1167,
+  "mapHeight": 828,
+  "origin": [
+   580,
+   430
+  ],
+  "scale": 0.1,
+  "floorHeight": 0.6,
+  "northAngleDeg": 90,
+  "metersPerPixel": 0.8,
+  "walkMetersPerMin": 60,
+  "_metersPerPixel說明": "平面圖每像素約幾公尺（估計值，用於步行距離/時間，請依實際校正）"
+ },
+ "categories": {
+  "main": {
+   "name": "醫療大樓",
+   "color": "#f6c445"
+  },
+  "opd": {
+   "name": "門診大樓",
+   "color": "#bfe3a8"
+  },
+  "center": {
+   "name": "特色醫療中心",
+   "color": "#7ddc6a"
+  },
+  "cancer": {
+   "name": "癌症治療",
+   "color": "#5fd3f0"
+  },
+  "admin": {
+   "name": "行政與教學",
+   "color": "#d6d3cf"
+  },
+  "life": {
+   "name": "生活與服務",
+   "color": "#e9dcc8"
+  }
+ },
+ "buildings": [
+  {
+   "id": "chungcheng",
+   "name": "中正樓",
+   "en": "Chung-Cheng Building",
+   "category": "main",
+   "desc": "院區核心醫療大樓，設有急診室、生活廣場，並以高架連通道串連思源樓、長青樓、柯柏館與門診大樓。",
+   "parts": [
+    {
+     "rect": [
+      362,
+      404,
+      520,
+      487
+     ],
+     "floors": 5,
+     "color": "#f6c445"
+    },
+    {
+     "rect": [
+      470,
+      486,
+      632,
+      590
+     ],
+     "floors": 18,
+     "color": "#f6c445",
+     "main": true,
+     "roof": "helipad"
+    },
+    {
+     "rect": [
+      520,
+      408,
+      632,
+      486
+     ],
+     "floors": 2,
+     "color": "#f4f1ec",
+     "label": "急診室",
+     "cross": true
+    },
+    {
+     "rect": [
+      366,
+      488,
+      470,
+      590
+     ],
+     "floors": 4,
+     "color": "#bfe6ff",
+     "glass": true,
+     "label": "生活廣場"
+    }
+   ],
+   "floorsInfo": {
+    "1F": "急診室・生活廣場（示意）",
+    "2F": "門診・檢查區（示意）",
+    "18F": "頂樓（示意）"
+   },
+   "door": [
+    505,
+    597
+   ],
+   "basement": 2
+  },
+  {
+   "id": "operating",
+   "name": "手術樓",
+   "en": "Operating Building",
+   "category": "main",
+   "desc": "位於中正樓北側，與思源樓、動力大樓以連通道相接。",
+   "parts": [
+    {
+     "rect": [
+      368,
+      391,
+      494,
+      405
+     ],
+     "floors": 6,
+     "color": "#f6d36a",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "shihyuan",
+   "name": "思源樓",
+   "en": "Shih-Yuan Building",
+   "category": "main",
+   "desc": "位於中正樓北側，以連通道與中正樓、精神醫學大樓相連。",
+   "parts": [
+    {
+     "rect": [
+      416,
+      284,
+      582,
+      342
+     ],
+     "floors": 9,
+     "color": "#f6c445",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "changching",
+   "name": "長青樓",
+   "en": "Chang-Ching Building",
+   "category": "main",
+   "desc": "位於院區西北側，設有停車場，以高架連通道連接中正樓。",
+   "parts": [
+    {
+     "rect": [
+      125,
+      340,
+      248,
+      422
+     ],
+     "floors": 8,
+     "color": "#f6c445",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "opd1",
+   "name": "第一門診",
+   "en": "1st Outpatient Building",
+   "category": "opd",
+   "desc": "門診大樓群之一，以連通道連接中正樓與第三門診。",
+   "parts": [
+    {
+     "rect": [
+      216,
+      662,
+      325,
+      707
+     ],
+     "floors": 4,
+     "color": "#bfe3a8",
+     "main": true
+    }
+   ],
+   "basement": 1
+  },
+  {
+   "id": "opd2",
+   "name": "第二門診",
+   "en": "2nd Outpatient Building",
+   "category": "opd",
+   "desc": "門診大樓群之一，以連通道連接湖畔門診。",
+   "parts": [
+    {
+     "rect": [
+      106,
+      552,
+      261,
+      614
+     ],
+     "floors": 5,
+     "color": "#bfe3a8",
+     "main": true
+    }
+   ],
+   "basement": 1
+  },
+  {
+   "id": "opd3",
+   "name": "第三門診",
+   "en": "3rd Outpatient Building",
+   "category": "opd",
+   "desc": "門診大樓群之一，旁設停車場。",
+   "parts": [
+    {
+     "rect": [
+      102,
+      639,
+      207,
+      717
+     ],
+     "floors": 5,
+     "color": "#bfe3a8",
+     "main": true
+    }
+   ],
+   "basement": 1
+  },
+  {
+   "id": "lakeside",
+   "name": "湖畔門診",
+   "en": "Lakeside Outpatient Building",
+   "category": "opd",
+   "desc": "鄰近院區水池的門診大樓，串連第二門診與第一門診。",
+   "parts": [
+    {
+     "rect": [
+      212,
+      620,
+      336,
+      652
+     ],
+     "floors": 3,
+     "color": "#cfeab9",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "heavyion",
+   "name": "重粒子癌症治療中心",
+   "en": "Heavy Ion Therapy Center",
+   "category": "cancer",
+   "desc": "位於院區西側的癌症放射治療中心。",
+   "parts": [
+    {
+     "rect": [
+      8,
+      582,
+      62,
+      670
+     ],
+     "floors": 4,
+     "color": "#5fd3f0",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "neuro",
+   "name": "神經再生中心",
+   "en": "Neural Regeneration Center",
+   "category": "center",
+   "desc": "神經修復相關醫療中心，位於石牌路二段旁。",
+   "parts": [
+    {
+     "rect": [
+      937,
+      336,
+      1079,
+      392
+     ],
+     "floors": 5,
+     "color": "#7ddc6a",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "rehab",
+   "name": "身障重建中心",
+   "en": "Rehabilitation and Technical Aid Center",
+   "category": "center",
+   "desc": "復健與輔具相關服務中心。",
+   "parts": [
+    {
+     "rect": [
+      939,
+      426,
+      1056,
+      488
+     ],
+     "floors": 4,
+     "color": "#7ddc6a",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "chihteh",
+   "name": "致德樓",
+   "en": "Chih-Teh Building",
+   "category": "center",
+   "highlight": true,
+   "desc": "位於石牌路二段東側（平面圖中紅框標示）。",
+   "parts": [
+    {
+     "rect": [
+      947,
+      495,
+      1020,
+      562
+     ],
+     "floors": 10,
+     "color": "#e7e3df",
+     "main": true,
+     "rounded": 6
+    }
+   ]
+  },
+  {
+   "id": "kobo",
+   "name": "柯柏館",
+   "en": "Medical Science & Technology Building",
+   "category": "admin",
+   "desc": "醫學科技大樓，以連通道與中正樓相接。",
+   "parts": [
+    {
+     "rect": [
+      651,
+      472,
+      774,
+      532
+     ],
+     "floors": 8,
+     "color": "#d6d3cf",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "mgmt",
+   "name": "醫管樓",
+   "en": "Hospital Management Building",
+   "category": "admin",
+   "desc": "醫院行政管理大樓。",
+   "parts": [
+    {
+     "rect": [
+      666,
+      393,
+      728,
+      460
+     ],
+     "floors": 5,
+     "color": "#d6d3cf",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "chiehshou",
+   "name": "介壽堂",
+   "en": "Chieh-Shou Hall",
+   "category": "admin",
+   "desc": "大型集會與活動場館，前方有水池。",
+   "parts": [
+    {
+     "rect": [
+      826,
+      472,
+      891,
+      559
+     ],
+     "floors": 2,
+     "color": "#d6d3cf",
+     "main": true,
+     "rounded": 12
+    }
+   ]
+  },
+  {
+   "id": "psych",
+   "name": "精神醫學大樓",
+   "en": "Psychiatry Building",
+   "category": "main",
+   "desc": "位於院區北側，以連通道連接思源樓。",
+   "parts": [
+    {
+     "obb": [
+      553,
+      196,
+      112,
+      52,
+      27
+     ],
+     "floors": 5,
+     "color": "#d6d3cf",
+     "main": true
+    },
+    {
+     "obb": [
+      532,
+      222,
+      40,
+      40,
+      27
+     ],
+     "floors": 3,
+     "color": "#d6d3cf"
+    }
+   ]
+  },
+  {
+   "id": "pet",
+   "name": "正子中心",
+   "en": "National PET and Cyclotron Center",
+   "category": "admin",
+   "desc": "正子造影與迴旋加速器中心。",
+   "parts": [
+    {
+     "obb": [
+      470,
+      197,
+      18,
+      50,
+      -27
+     ],
+     "floors": 2,
+     "color": "#d6d3cf",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "skills",
+   "name": "臨床技能訓練中心",
+   "en": "Clinical Skills Training Center",
+   "category": "admin",
+   "desc": "臨床技能教學與模擬訓練中心。",
+   "parts": [
+    {
+     "obb": [
+      423,
+      177,
+      92,
+      30,
+      27
+     ],
+     "floors": 3,
+     "color": "#d6d3cf",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "sunflower",
+   "name": "向日葵學園",
+   "en": "Adolescent Sunflower Dayward",
+   "category": "life",
+   "desc": "青少年日間病房。",
+   "parts": [
+    {
+     "rect": [
+      330,
+      120,
+      385,
+      157
+     ],
+     "floors": 2,
+     "color": "#d6d3cf",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "huaien",
+   "name": "懷恩堂",
+   "en": "Huai-En Hall",
+   "category": "life",
+   "desc": "位於院區東北側。",
+   "parts": [
+    {
+     "obb": [
+      634,
+      151,
+      30,
+      72,
+      27
+     ],
+     "floors": 2,
+     "color": "#d6d3cf",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "huaiyuan",
+   "name": "懷遠堂",
+   "en": "Huai-Yuan Hall",
+   "category": "life",
+   "desc": "位於院區東北側。",
+   "parts": [
+    {
+     "obb": [
+      640,
+      234,
+      72,
+      46,
+      27
+     ],
+     "floors": 2,
+     "color": "#d6d3cf",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "power",
+   "name": "動力大樓",
+   "en": "Power Plant Building",
+   "category": "admin",
+   "desc": "院區機電動力設施。",
+   "parts": [
+    {
+     "rect": [
+      288,
+      270,
+      343,
+      350
+     ],
+     "floors": 3,
+     "color": "#cfcac4",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "rongguang",
+   "name": "榮光樓",
+   "en": "Rong-Guang Building",
+   "category": "life",
+   "desc": "社會工作室、榮光幼稚園。",
+   "parts": [
+    {
+     "rect": [
+      632,
+      357,
+      686,
+      384
+     ],
+     "floors": 3,
+     "color": "#e9dcc8",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "store",
+   "name": "員工消費合作社",
+   "en": "Staff Convenient Store",
+   "category": "life",
+   "desc": "員工消費合作社，旁有理髮部。",
+   "parts": [
+    {
+     "rect": [
+      604,
+      357,
+      624,
+      384
+     ],
+     "floors": 1,
+     "color": "#e9dcc8",
+     "main": true
+    }
+   ]
+  },
+  {
+   "id": "gym",
+   "name": "孝威館",
+   "en": "Gymnasium",
+   "category": "life",
+   "desc": "院區體育館。",
+   "parts": [
+    {
+     "rect": [
+      941,
+      282,
+      1012,
+      327
+     ],
+     "floors": 2,
+     "color": "#d6d3cf",
+     "main": true,
+     "roof": "arch"
+    }
+   ]
+  },
+  {
+   "id": "underpass",
+   "name": "地下連通道（傳醫部）",
+   "en": "Underground Passage (Traditional Medicine Dept.)",
+   "category": "main",
+   "desc": "連接院區與石牌路二段的地下通道，傳統醫學部位於此。",
+   "parts": [
+    {
+     "rect": [
+      365,
+      677,
+      515,
+      735
+     ],
+     "floors": 1,
+     "color": "#d6d3cf",
+     "main": true
+    }
+   ],
+   "door": [
+    440,
+    740
+   ]
+  },
+  {
+   "id": "service",
+   "name": "銀行・郵局服務區",
+   "en": "Bank & Post Office",
+   "category": "life",
+   "desc": "中正樓南側的金融服務設施（示意）。",
+   "parts": [
+    {
+     "rect": [
+      366,
+      605,
+      442,
+      660
+     ],
+     "floors": 1,
+     "color": "#e3e3e3",
+     "main": true
+    }
+   ]
+  }
+ ],
+ "bridges": [
+  {
+   "name": "長青樓－中正樓",
+   "path": [
+    [
+     248,
+     385
+    ],
+    [
+     362,
+     440
+    ]
+   ],
+   "level": 3
+  },
+  {
+   "name": "動力大樓－手術樓",
+   "path": [
+    [
+     338,
+     352
+    ],
+    [
+     372,
+     400
+    ]
+   ],
+   "level": 2
+  },
+  {
+   "name": "思源樓－手術樓",
+   "path": [
+    [
+     495,
+     342
+    ],
+    [
+     495,
+     392
+    ]
+   ],
+   "level": 3
+  },
+  {
+   "name": "精神醫學大樓－思源樓",
+   "path": [
+    [
+     522,
+     240
+    ],
+    [
+     496,
+     266
+    ],
+    [
+     496,
+     284
+    ]
+   ],
+   "level": 2
+  },
+  {
+   "name": "中正樓－柯柏館",
+   "path": [
+    [
+     632,
+     477
+    ],
+    [
+     651,
+     477
+    ]
+   ],
+   "level": 3
+  },
+  {
+   "name": "中正樓－第一門診",
+   "path": [
+    [
+     362,
+     540
+    ],
+    [
+     341,
+     540
+    ],
+    [
+     341,
+     660
+    ],
+    [
+     325,
+     670
+    ]
+   ],
+   "level": 2
+  },
+  {
+   "name": "第二門診－湖畔門診",
+   "path": [
+    [
+     168,
+     614
+    ],
+    [
+     168,
+     628
+    ],
+    [
+     212,
+     628
+    ]
+   ],
+   "level": 2
+  },
+  {
+   "name": "湖畔門診－第一門診",
+   "path": [
+    [
+     242,
+     652
+    ],
+    [
+     242,
+     662
+    ]
+   ],
+   "level": 2
+  },
+  {
+   "name": "第三門診－第一門診",
+   "path": [
+    [
+     207,
+     677
+    ],
+    [
+     216,
+     677
+    ]
+   ],
+   "level": 2
+  }
+ ],
+ "roads": [
+  {
+   "name": "往陽明交通大學",
+   "w": 13,
+   "path": [
+    [
+     40,
+     137
+    ],
+    [
+     285,
+     137
+    ],
+    [
+     350,
+     177
+    ],
+    [
+     347,
+     675
+    ]
+   ]
+  },
+  {
+   "w": 11,
+   "path": [
+    [
+     350,
+     177
+    ],
+    [
+     440,
+     128
+    ],
+    [
+     472,
+     128
+    ],
+    [
+     512,
+     205
+    ]
+   ]
+  },
+  {
+   "w": 11,
+   "path": [
+    [
+     622,
+     82
+    ],
+    [
+     715,
+     230
+    ],
+    [
+     585,
+     300
+    ],
+    [
+     588,
+     388
+    ]
+   ]
+  },
+  {
+   "w": 9,
+   "path": [
+    [
+     692,
+     193
+    ],
+    [
+     757,
+     162
+    ]
+   ]
+  },
+  {
+   "w": 11,
+   "path": [
+    [
+     343,
+     345
+    ],
+    [
+     588,
+     345
+    ]
+   ]
+  },
+  {
+   "w": 11,
+   "path": [
+    [
+     347,
+     388
+    ],
+    [
+     922,
+     388
+    ]
+   ]
+  },
+  {
+   "name": "石牌路二段",
+   "w": 15,
+   "path": [
+    [
+     922,
+     215
+    ],
+    [
+     922,
+     560
+    ],
+    [
+     905,
+     590
+    ],
+    [
+     610,
+     745
+    ],
+    [
+     37,
+     745
+    ]
+   ]
+  },
+  {
+   "w": 11,
+   "path": [
+    [
+     922,
+     560
+    ],
+    [
+     850,
+     825
+    ]
+   ]
+  },
+  {
+   "name": "天母西路",
+   "w": 13,
+   "path": [
+    [
+     798,
+     612
+    ],
+    [
+     1055,
+     680
+    ]
+   ]
+  },
+  {
+   "w": 11,
+   "path": [
+    [
+     637,
+     395
+    ],
+    [
+     637,
+     535
+    ],
+    [
+     740,
+     690
+    ],
+    [
+     866,
+     828
+    ]
+   ]
+  },
+  {
+   "w": 11,
+   "path": [
+    [
+     650,
+     465
+    ],
+    [
+     922,
+     465
+    ]
+   ]
+  },
+  {
+   "w": 9,
+   "path": [
+    [
+     891,
+     505
+    ],
+    [
+     922,
+     505
+    ]
+   ]
+  },
+  {
+   "w": 11,
+   "path": [
+    [
+     347,
+     672
+    ],
+    [
+     660,
+     672
+    ],
+    [
+     740,
+     652
+    ]
+   ]
+  },
+  {
+   "w": 11,
+   "path": [
+    [
+     558,
+     660
+    ],
+    [
+     558,
+     745
+    ]
+   ]
+  },
+  {
+   "w": 11,
+   "path": [
+    [
+     347,
+     503
+    ],
+    [
+     130,
+     503
+    ],
+    [
+     92,
+     725
+    ],
+    [
+     347,
+     725
+    ],
+    [
+     347,
+     672
+    ]
+   ]
+  },
+  {
+   "name": "立農街二段",
+   "w": 13,
+   "path": [
+    [
+     37,
+     745
+    ],
+    [
+     347,
+     745
+    ]
+   ]
+  },
+  {
+   "w": 13,
+   "path": [
+    [
+     195,
+     828
+    ],
+    [
+     340,
+     750
+    ]
+   ]
+  }
+ ],
+ "water": [
+  {
+   "w": 18,
+   "path": [
+    [
+     330,
+     352
+    ],
+    [
+     350,
+     368
+    ],
+    [
+     588,
+     368
+    ],
+    [
+     596,
+     306
+    ],
+    [
+     700,
+     250
+    ],
+    [
+     736,
+     205
+    ],
+    [
+     720,
+     192
+    ]
+   ]
+  },
+  {
+   "w": 16,
+   "path": [
+    [
+     345,
+     380
+    ],
+    [
+     338,
+     430
+    ],
+    [
+     300,
+     470
+    ],
+    [
+     115,
+     497
+    ],
+    [
+     85,
+     560
+    ],
+    [
+     80,
+     720
+    ]
+   ]
+  }
+ ],
+ "ponds": [
+  {
+   "center": [
+    292,
+    565
+   ],
+   "r": [
+    14,
+    48
+   ]
+  },
+  {
+   "center": [
+    850,
+    580
+   ],
+   "r": [
+    22,
+    15
+   ]
+  }
+ ],
+ "fountain": {
+  "center": [
+   560,
+   629
+  ],
+  "r": 34
+ },
+ "parking": [
+  [
+   268,
+   112
+  ],
+  [
+   404,
+   137
+  ],
+  [
+   427,
+   373
+  ],
+  [
+   563,
+   395
+  ],
+  [
+   714,
+   207
+  ],
+  [
+   904,
+   409
+  ],
+  [
+   778,
+   619
+  ],
+  [
+   600,
+   705
+  ],
+  [
+   395,
+   706
+  ],
+  [
+   236,
+   365
+  ]
+ ],
+ "securityRooms": [
+  [
+   901,
+   370
+  ],
+  [
+   722,
+   590
+  ]
+ ],
+ "neighbors": [
+  {
+   "name": "國立臺北護理健康大學",
+   "rect": [
+    340,
+    760,
+    900,
+    828
+   ],
+   "color": "#efefef"
+  }
+ ],
+ "directions": [
+  {
+   "text": "往陽明交通大學",
+   "at": [
+    140,
+    165
+   ]
+  },
+  {
+   "text": "往行義路",
+   "at": [
+    922,
+    175
+   ]
+  },
+  {
+   "text": "往振興醫院",
+   "at": [
+    900,
+    800
+   ]
+  }
+ ],
+ "entrances": [
+  {
+   "id": "shuttle",
+   "name": "接駁車站（往石牌捷運站）",
+   "icon": "S",
+   "at": [
+    478,
+    605
+   ]
+  },
+  {
+   "id": "main-gate",
+   "name": "石牌路二段大門（圓環）",
+   "icon": "🚪",
+   "at": [
+    558,
+    740
+   ]
+  },
+  {
+   "id": "lobby",
+   "name": "中正樓大廳",
+   "icon": "🏥",
+   "at": [
+    505,
+    600
+   ]
+  },
+  {
+   "id": "cart-north",
+   "name": "院內接駁站（思源樓旁）",
+   "icon": "C",
+   "at": [
+    380,
+    362
+   ]
+  },
+  {
+   "id": "tianmu",
+   "name": "天母西路口",
+   "icon": "🚪",
+   "at": [
+    905,
+    600
+   ]
+  },
+  {
+   "id": "linong",
+   "name": "立農街側門",
+   "icon": "🚪",
+   "at": [
+    210,
+    745
+   ]
+  },
+  {
+   "id": "park-changching",
+   "name": "長青樓停車場",
+   "icon": "P",
+   "at": [
+    236,
+    372
+   ]
+  },
+  {
+   "id": "park-opd3",
+   "name": "第三門診停車場",
+   "icon": "P",
+   "at": [
+    185,
+    712
+   ]
+  },
+  {
+   "id": "park-south",
+   "name": "石牌路停車場",
+   "icon": "P",
+   "at": [
+    600,
+    705
+   ]
+  }
+ ],
+ "walkways": [
+  {
+   "name": "中正樓大廳前廣場",
+   "path": [
+    [
+     505,
+     597
+    ],
+    [
+     505,
+     620
+    ],
+    [
+     478,
+     640
+    ],
+    [
+     475,
+     672
+    ]
+   ]
+  },
+  {
+   "name": "圓環步道",
+   "path": [
+    [
+     558,
+     672
+    ],
+    [
+     560,
+     600
+    ],
+    [
+     505,
+     600
+    ]
+   ]
+  },
+  {
+   "name": "思源樓前步道",
+   "path": [
+    [
+     380,
+     362
+    ],
+    [
+     380,
+     388
+    ]
+   ]
+  }
+ ]
+}
